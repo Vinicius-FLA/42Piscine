@@ -1,15 +1,15 @@
 #include <unistd.h>
 
-void ft_putchar(char c)
-{   
-    write (1, &c, 1);
+void	ft_putchar(char c)
+{
+	write (1, &c, 1);
 }
 
 /* int main()
 {
-    char teste;
+	char teste;
 
-    teste = 'f';
-    ft_putchar(teste);
+	teste = 'f';
+	ft_putchar(teste);
 }
 */
