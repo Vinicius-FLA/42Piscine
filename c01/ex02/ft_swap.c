@@ -1,30 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vinicius <vinicius@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/20 14:43:30 by vinicius          #+#    #+#             */
-/*   Updated: 2025/01/20 21:58:40 by vinicius         ###   ########.fr       */
+/*   Created: 2025/01/20 22:22:07 by vinicius          #+#    #+#             */
+/*   Updated: 2025/01/20 22:32:37 by vinicius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdio.h>
-#include <stdlib.h>*/
+//#include <stdio.h>
 
-void ft_ft(int *nbr)
+void    ft_swap(int *a, int *b)
 {
-    *nbr = 42;
+	int aux;
+
+	aux = *a;
+	*a = *b;
+	*b = aux;    
 }
 
-/*int main ()
-
+/*int	main()
 {
-    int n = 42;
-    int *nbr = &n;
+	int x;
+	int z;
+	x = 1;
+	z = 2;
 
-    ft_ft;
-    printf  ( "%d\n", *nbr);
+	ft_swap(&x, &z);
+	printf("valor de a: %d\n, valor de b: %d\n", x, z);
+
 
 }*/
