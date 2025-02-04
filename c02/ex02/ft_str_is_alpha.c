@@ -1,34 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vinicius <vinicius@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/20 22:22:07 by vinicius          #+#    #+#             */
-/*   Updated: 2025/02/04 22:24:58 by vinicius         ###   ########.fr       */
+/*   Created: 2025/02/04 22:58:17 by vinicius          #+#    #+#             */
+/*   Updated: 2025/02/04 23:12:49 by vinicius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+#include <stdio.h>
 
-void	ft_swap(int *a, int *b)
+int	ft_str_is_alpha(char *str)
 {
-	int	aux;
+	int	i;
 
-	aux = *a;
-	*a = *b;
-	*b = aux;
+	i = 0;
+	while (str[i])
+	{
+		if (!(str[i] >= 'a' && str[i] <= 'z')
+			&& !(str[i] >= 'A' && str[i] <= 'Z'))
+			return (0);
+	}
+	return (1);
 }
-/*int	main()
+/*int main (void)
 {
-	int x;
-	int z;
-	x = 1;
-	z = 2;
-
-	ft_swap(&x, &z);
-	printf("valor de a: %d\n, valor de b: %d\n", x, z);
-
-
+	printf("%d\n", ft_str_is_alpha("1"));
 }*/

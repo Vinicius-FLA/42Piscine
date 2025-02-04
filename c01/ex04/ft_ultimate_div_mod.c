@@ -6,19 +6,19 @@
 /*   By: vinicius <vinicius@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 21:13:35 by vinicius          #+#    #+#             */
-/*   Updated: 2025/01/21 21:17:53 by vinicius         ###   ########.fr       */
+/*   Updated: 2025/02/04 22:21:04 by vinicius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdio.h>
 
-void ft_ultimate_div_mod(int *a, int *b)
+void	ft_ultimate_div_mod(int *a, int *b)
 {
-    int aux;
+	int	aux;
 
-    aux = *a;
-    *a = *a / *b;
-    *b = aux % *b;
+	aux = *a;
+	*a = *a / *b;
+	*b = aux % *b;
 }
 
 /*int main()

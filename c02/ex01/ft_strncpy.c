@@ -1,34 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vinicius <vinicius@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/20 22:22:07 by vinicius          #+#    #+#             */
-/*   Updated: 2025/02/04 22:24:58 by vinicius         ###   ########.fr       */
+/*   Created: 2025/02/04 22:46:05 by vinicius          #+#    #+#             */
+/*   Updated: 2025/02/04 22:57:34 by vinicius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+#include <stdio.h>
 
-void	ft_swap(int *a, int *b)
+char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	int	aux;
+	unsigned int	i;
 
-	aux = *a;
-	*a = *b;
-	*b = aux;
+	i = 0;
+	while (src[i] && i < n)
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	while (i < n)
+	{
+		dest[i] = '\0';
+		i++;
+	}
+	return (dest);
 }
-/*int	main()
+
+/*int main(void)
 {
-	int x;
-	int z;
-	x = 1;
-	z = 2;
-
-	ft_swap(&x, &z);
-	printf("valor de a: %d\n, valor de b: %d\n", x, z);
-
-
+	char src[] = "OLA MUNDO";
+	char dest[20];
+	ft_strncpy (dest, src, 3);
+	printf("result: %s\n", dest);
 }*/

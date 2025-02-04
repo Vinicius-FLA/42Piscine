@@ -6,17 +6,16 @@
 /*   By: vinicius <vinicius@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 21:06:27 by vinicius          #+#    #+#             */
-/*   Updated: 2025/01/21 21:12:25 by vinicius         ###   ########.fr       */
+/*   Updated: 2025/02/04 22:22:04 by vinicius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdio.h>
 
-void    ft_div_mod(int a, int b, int *div, int *mod)
-
+void	ft_div_mod(int a, int b, int *div, int *mod)
 {
-    *div = a / b;
-    *mod = a % b;
+	*div = a / b;
+	*mod = a % b;
 }
 
 /*int main()

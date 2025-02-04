@@ -6,25 +6,22 @@
 /*   By: vinicius <vinicius@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 14:43:30 by vinicius          #+#    #+#             */
-/*   Updated: 2025/01/20 21:58:40 by vinicius         ###   ########.fr       */
+/*   Updated: 2025/02/04 22:15:48 by vinicius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdio.h>
-#include <stdlib.h>*/
-
-void ft_ft(int *nbr)
+#include <stdio.h>
+#include <stdlib.h>
+void    ft_ft(int *nbr)
 {
     *nbr = 42;
 }
 
 /*int main ()
-
 {
     int n = 42;
     int *nbr = &n;
 
-    ft_ft;
+    ft_ft(nbr);
     printf  ( "%d\n", *nbr);
-
 }*/

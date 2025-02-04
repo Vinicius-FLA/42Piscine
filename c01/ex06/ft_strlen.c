@@ -1,34 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vinicius <vinicius@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/20 22:22:07 by vinicius          #+#    #+#             */
-/*   Updated: 2025/02/04 22:24:58 by vinicius         ###   ########.fr       */
+/*   Created: 2025/01/23 21:44:40 by vinicius          #+#    #+#             */
+/*   Updated: 2025/02/04 22:18:23 by vinicius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
-
-void	ft_swap(int *a, int *b)
+int	ft_strlen(char *str)
 {
-	int	aux;
+	int	i;
 
-	aux = *a;
-	*a = *b;
-	*b = aux;
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
 }
-/*int	main()
+
+/*#include <stdio.h>
+int	main(void)
 {
-	int x;
-	int z;
-	x = 1;
-	z = 2;
-
-	ft_swap(&x, &z);
-	printf("valor de a: %d\n, valor de b: %d\n", x, z);
-
-
+	char *string = "qualquer coisa";
+	
+	
+	printf("contagem de char: %d\n", ft_strlen(string));
+	return(0);
 }*/
