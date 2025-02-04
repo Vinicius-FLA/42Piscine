@@ -6,14 +6,13 @@
 /*   By: vinicius <vinicius@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 22:01:33 by vinicius          #+#    #+#             */
-/*   Updated: 2025/01/20 22:21:14 by vinicius         ###   ########.fr       */
+/*   Updated: 2025/02/04 22:25:35 by vinicius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdio.h>
 
 void	ft_ultimate_ft(int *********nbr)
-
 {
 	*********nbr = 42;
 }
