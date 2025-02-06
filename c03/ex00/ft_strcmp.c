@@ -3,34 +3,36 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vinicius <vinicius@student.42.fr>          +#+  +:+       +#+        */
+/*   By: viniciusmelo <viniciusmelo@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 14:43:46 by vinicius          #+#    #+#             */
-/*   Updated: 2025/02/05 22:43:17 by vinicius         ###   ########.fr       */
+/*   Updated: 2025/02/06 23:51:31 by viniciusmel      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-char	*ft_strupcase(char *str)
+char	*ft_strupcase(char *s1, char *s2)
 {
 	int	i;
 
 	i = 0;
-	while (str[i])
+	while (s1[i] == s2[i]
+		&& (s1[i] || s2[i]))
 	{
-		if (str[i] && str[i] >= 97 && str[i] <= 122)
-		{
-			str[i] -= 32;
-		}
 		i++;
 	}
-	return (str);
+	return (s1[i] - s2[i]);
+	
 }
 
-/*int main(void)
+/*int main(int argc, char **argv)
 {
-	char str[] = "a@F2";
-	printf ("%s\n", ft_strupcase (str));
-	return (0);
+	if(argc == 3)
+	{
+		printf("%d\n", ft_strcmp(arg[1], argv[2]));
+	}
+	else
+	printf("ERRO, FALTA DE ARGUMENTO")
+}
 }*/
