@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: viniciusmelo <viniciusmelo@student.42.f    +#+  +:+       +#+        */
+/*   By: vinicius <vinicius@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 18:36:10 by viniciusmel       #+#    #+#             */
-/*   Updated: 2025/02/05 19:05:57 by viniciusmel      ###   ########.fr       */
+/*   Updated: 2025/02/05 22:41:43 by vinicius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ char	*ft_strcat(char *dest, char *src)
 
 	a = 0;
 	b = 0;
-
 	while (dest[a])
 		a++;
 	while (src[b])

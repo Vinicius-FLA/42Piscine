@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: viniciusmelo <viniciusmelo@student.42.f    +#+  +:+       +#+        */
+/*   By: vinicius <vinicius@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 17:36:08 by viniciusmel       #+#    #+#             */
-/*   Updated: 2025/02/05 18:34:58 by viniciusmel      ###   ########.fr       */
+/*   Updated: 2025/02/05 22:42:30 by vinicius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
 	unsigned int	i;
-	
+
 	if (n == 0)
 	{
 		return (0);

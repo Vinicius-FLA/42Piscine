@@ -1,36 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vinicius <vinicius@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/05 14:43:46 by vinicius          #+#    #+#             */
-/*   Updated: 2025/02/05 22:43:17 by vinicius         ###   ########.fr       */
+/*   Created: 2025/02/05 23:01:16 by vinicius          #+#    #+#             */
+/*   Updated: 2025/02/05 23:58:55 by vinicius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <unistd.h>
 
-char	*ft_strupcase(char *str)
+void	ft_putchar(char c)
 {
-	int	i;
+	write (1, &c, 1);
+}
 
-	i = 0;
-	while (str[i])
+void	ft_putnbr(int nb)
+{
+	if (nb == -2147483648)
 	{
-		if (str[i] && str[i] >= 97 && str[i] <= 122)
-		{
-			str[i] -= 32;
-		}
-		i++;
+		write (1, "-2147483648", 11);
+		return ;
 	}
-	return (str);
+	if (nb < 0)
+	{
+		ft_putchar ('-');
+		nb *= -1;
+	}
+	if (nb > 9)
+	{
+		ft_putnbr(nb / 10);
+	}
+	ft_putchar((nb % 10) + 48);
 }
 
 /*int main(void)
 {
-	char str[] = "a@F2";
-	printf ("%s\n", ft_strupcase (str));
+	int a = 22;
+	ft_putnbr(a);
 	return (0);
 }*/

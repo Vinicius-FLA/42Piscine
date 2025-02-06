@@ -1,36 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vinicius <vinicius@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/05 14:43:46 by vinicius          #+#    #+#             */
-/*   Updated: 2025/02/05 22:43:17 by vinicius         ###   ########.fr       */
+/*   Created: 2025/02/06 00:20:27 by vinicius          #+#    #+#             */
+/*   Updated: 2025/02/06 00:53:29 by vinicius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-char	*ft_strupcase(char *str)
+int	ft_atoi(char *str)
 {
 	int	i;
+	int	count;
+	int	nb;
 
 	i = 0;
-	while (str[i])
+	count = 1;
+	nb = 0;
+	while (str[i] <= 32 || str[i] >= 9 && str[i] <= 13)
 	{
-		if (str[i] && str[i] >= 97 && str[i] <= 122)
-		{
-			str[i] -= 32;
-		}
 		i++;
 	}
-	return (str);
+	while (str[i] == '-' || str[i] == '+')
+	{
+		if (str[i] == '-')
+			count *= -1;
+		i++;
+	}
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		nb = nb * 10 + (str[i] - '0');
+		i++;
+	}
+	return (nb * count);
 }
 
-/*int main(void)
+int main(void)
 {
-	char str[] = "a@F2";
-	printf ("%s\n", ft_strupcase (str));
-	return (0);
-}*/
+	char str[] = "-----13";
+	printf ("%i\n", ft_atoi (str));
+}

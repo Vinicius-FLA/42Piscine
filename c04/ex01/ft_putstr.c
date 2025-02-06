@@ -1,36 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vinicius <vinicius@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/05 14:43:46 by vinicius          #+#    #+#             */
-/*   Updated: 2025/02/05 22:43:17 by vinicius         ###   ########.fr       */
+/*   Created: 2025/02/05 22:54:49 by vinicius          #+#    #+#             */
+/*   Updated: 2025/02/05 23:02:20 by vinicius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <unistd.h>
 
-char	*ft_strupcase(char *str)
+void	ft_putstr(char *str)
 {
-	int	i;
-
-	i = 0;
-	while (str[i])
+	while (*str)
 	{
-		if (str[i] && str[i] >= 97 && str[i] <= 122)
-		{
-			str[i] -= 32;
-		}
-		i++;
+		write (1, str, 1);
+		str++;
 	}
-	return (str);
 }
 
 /*int main(void)
 {
-	char str[] = "a@F2";
-	printf ("%s\n", ft_strupcase (str));
-	return (0);
+	char str[] = "HELLO WORLD";
+	ft_putstr(str);
 }*/

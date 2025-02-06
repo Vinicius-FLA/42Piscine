@@ -1,36 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vinicius <vinicius@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/05 14:43:46 by vinicius          #+#    #+#             */
-/*   Updated: 2025/02/05 22:43:17 by vinicius         ###   ########.fr       */
+/*   Created: 2025/02/05 21:20:32 by vinicius          #+#    #+#             */
+/*   Updated: 2025/02/05 22:00:07 by vinicius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-char	*ft_strupcase(char *str)
+char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	int	i;
+	unsigned int	i;
+	unsigned int	dest_len;
 
 	i = 0;
-	while (str[i])
+	dest_len = 0;
+	if (nb < 0)
 	{
-		if (str[i] && str[i] >= 97 && str[i] <= 122)
-		{
-			str[i] -= 32;
-		}
-		i++;
+		return (src);
 	}
-	return (str);
+	while (dest[i])
+		i++;
+	while (src[dest_len] && dest_len < nb)
+	{
+		dest[i] = src[dest_len];
+		i++;
+		dest_len++;
+	}
+	dest[i] = '\0';
+	return (dest);
 }
-
 /*int main(void)
 {
-	char str[] = "a@F2";
-	printf ("%s\n", ft_strupcase (str));
-	return (0);
+	char src[] = "HELLOO";
+	char dest[] = "HI";
+	int nb = 3;
+	printf("%s\n", ft_strncat (dest, src, nb));
+
 }*/
